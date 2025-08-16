@@ -34,7 +34,7 @@
             lblNomeProduto = new Label();
             txtProduto = new TextBox();
             btnAdicionar = new Button();
-            lblCompras = new ListBox();
+            libCompras = new ListBox();
             btnExluir = new Button();
             btnLimpar = new Button();
             ((System.ComponentModel.ISupportInitialize)pibLogo).BeginInit();
@@ -78,20 +78,21 @@
             // 
             // btnAdicionar
             // 
-            btnAdicionar.Location = new Point(12, 307);
+            btnAdicionar.Location = new Point(12, 293);
             btnAdicionar.Name = "btnAdicionar";
             btnAdicionar.Size = new Size(265, 44);
             btnAdicionar.TabIndex = 4;
             btnAdicionar.Text = "Adicionar";
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
-            // lblCompras
+            // libCompras
             // 
-            lblCompras.FormattingEnabled = true;
-            lblCompras.Location = new Point(304, 83);
-            lblCompras.Name = "lblCompras";
-            lblCompras.Size = new Size(476, 276);
-            lblCompras.TabIndex = 5;
+            libCompras.FormattingEnabled = true;
+            libCompras.Location = new Point(304, 83);
+            libCompras.Name = "libCompras";
+            libCompras.Size = new Size(476, 276);
+            libCompras.TabIndex = 5;
             // 
             // btnExluir
             // 
@@ -101,6 +102,7 @@
             btnExluir.TabIndex = 6;
             btnExluir.Text = "Excluir";
             btnExluir.UseVisualStyleBackColor = true;
+            btnExluir.Click += btnExluir_Click;
             // 
             // btnLimpar
             // 
@@ -110,6 +112,7 @@
             btnLimpar.TabIndex = 7;
             btnLimpar.Text = "Limpar Lista";
             btnLimpar.UseVisualStyleBackColor = true;
+            btnLimpar.Click += btnLimpar_Click_1;
             // 
             // Form1
             // 
@@ -118,7 +121,7 @@
             ClientSize = new Size(792, 449);
             Controls.Add(btnLimpar);
             Controls.Add(btnExluir);
-            Controls.Add(lblCompras);
+            Controls.Add(libCompras);
             Controls.Add(btnAdicionar);
             Controls.Add(txtProduto);
             Controls.Add(lblNomeProduto);
@@ -143,7 +146,7 @@
         private Label lblNomeProduto;
         private TextBox txtProduto;
         private Button btnAdicionar;
-        private ListBox lblCompras;
+        private ListBox libCompras;
         private Button btnExluir;
         private Button btnLimpar;
     }
